@@ -35,7 +35,7 @@ func main() {
 		return scanner.Text(), true
 	}
 
-	agentTools := []tools.ToolDefinition{tools.ReadFileDefinition, tools.ListFilesDefinition, tools.BashDefinition}
+	agentTools := []tools.ToolDefinition{tools.ReadFileDefinition, tools.ListFilesDefinition, tools.BashDefinition, tools.EditFileDefinition}
 	log.Printf("Initialised %d tools", len(agentTools))
 
 	agent := NewAgent(&client, getUserMessage, agentTools)
